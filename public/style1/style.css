@@ -1,0 +1,197 @@
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+header {
+    background: grey;
+    width: 100%;
+    height: 8rem;
+    margin: auto;
+}
+
+header figure {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 510px;
+}
+
+hgroup {
+    font-weight: bolder;
+    color: red;
+    position: absolute;
+    left: 200px;
+    top: 4px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 10%;
+    align-content: center;
+    margin: 250px 100px;
+}
+
+.content p {
+    line-height: 1.2;
+    max-width: 500px;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+.content h3::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: rgb(216, 21, 21);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+h3 {
+    height: 3em;
+    border-bottom: 1px solid rgb(175, 173, 173);
+    /* margin-bottom: 100px; */
+}
+
+.skill {
+    background: rgb(196, 193, 193);
+    margin: 10px;
+    padding: 8px;
+    width: 100%;
+}
+
+[data-skill="5"] span {
+    display: block;
+    background: red;
+    width: 50%;
+}
+
+[data-skill="3"] span {
+    background: red;
+    display: block;
+    width: 30%;
+}
+
+[data-skill="1"] span {
+    display: block;
+    background: red;
+    width: 9%;
+}
+
+[data-skill="9"] span {
+    display: block;
+    background: red;
+    width: 95%;
+}
+
+[data-skill="7"] span {
+    display: block;
+    background: red;
+    width: 70%;
+}
+
+.skills-primary::before {
+    content: 'Main';
+}
+
+.skills-secondary {
+    opacity: 0.7;
+}
+
+.skills-secondary::before {
+    content: 'Other';
+    /* margin: 30px; */
+}
+
+.skills-secondary {
+    margin-top: 20px;
+}
+
+.contacts {
+    position: absolute;
+    width: 51%;
+    height: 7rem;
+    left: 700px;
+    top: 10px;
+    background: linear-gradient( to right, red 50%, red 20%, black 10%, black 100%);
+}
+
+.contacts dl {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    margin: 3px;
+}
+
+.contact-value a {
+    color: red;
+}
+
+h4 {
+    color: red;
+}
+
+#contact h3 {
+    display: none;
+}
+
+.experience-date-separator {
+    color: red;
+    opacity: 1 !important;
+    /* font-weight: bolder; */
+    /* opacity: 1; */
+}
+
+.experience-details {
+    opacity: 0.5;
+}
+
+@media (max-width:500px) {
+    header {
+        background: grey;
+        width: 100%;
+        height: 20rem;
+        margin: auto;
+    }
+    hgroup {
+        font-weight: bolder;
+        color: red;
+        position: absolute;
+        left: 50px;
+        top: 4px;
+    }
+    header figure {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 50px;
+    }
+    .content {
+        display: inline-block;
+        margin: 20px 10px;
+    }
+    .skill {
+        max-width: 90%;
+    }
+    .contacts {
+        position: static;
+        width: 100%;
+        background: linear-gradient( to right, red 5%, red 48%, rgb(255, 255, 255) 10%, rgb(255, 255, 255) 100%);
+    }
+    #contact {
+        line-height: 1.2rem;
+    }
+    #contact h3 {
+        border-bottom: 1px solid rgb(175, 173, 173);
+        display: inline-block;
+        width: 100%;
+    }
+    .contacts a {
+        margin-left: 100px;
+    }
+    .contact-skype dd {
+        margin-left: 140px;
+    }
+}
